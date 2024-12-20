@@ -62,11 +62,11 @@ void button_pressed_callback(const struct device *dev, struct gpio_callback *cb,
     printf("button_pressed_callback %d\n", temp);
     if (temp) 
     {
-        was_pressed = false;
+        was_pressed = true;
     }
     else 
     {
-        was_pressed = true;
+        was_pressed = false;
     }
 }
 #define BUTTON_CHECK_INTERVAL 40 // 0.04 seconds, 25 Hz
